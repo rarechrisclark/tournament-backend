@@ -1,0 +1,23 @@
+networks:
+  tournament-backend:
+    external: true
+    name: localdev
+
+services:
+  backend:
+    build:
+      context: .
+      args:
+        env: dev
+    container_name: tournament-backend
+    networks:
+      - tournament-backend
+    restart: on-failure
+    environment:
+      VIRTUAL_HOST: tournament-backend.docker
+      VIRTUAL_PORT: 3000
+    env_file:
+      - ./code/.env
+    volumes:
+      - ./code:/opt/app
+    command: npm run dev
