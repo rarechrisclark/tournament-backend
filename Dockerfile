@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM node:18-alpine
 
 # Setup Environment
 ARG env=production
@@ -10,10 +10,11 @@ WORKDIR /opt/app
 # Copy configs to /app directory
 COPY /code/package*.json ./
 COPY /code/tsconfig.json ./
-COPY /code/tsconfig.${env}.json ./
+# TODO: Add in environments for tsconfig
+# COPY /code/tsconfig.${env}.json ./
 
 # Install dependencies
-RUN npm ci
+RUN npm i
 
 # Copy src into /app directory
 COPY /code/src ./src

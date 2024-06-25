@@ -17,7 +17,7 @@ services:
       VIRTUAL_HOST: tournament-backend.docker
       VIRTUAL_PORT: 3000
     env_file:
-      - ./code/.env
+      - ./docker/.env
     volumes:
       - ./code:/opt/app
     command: npm run dev
