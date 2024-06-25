@@ -1,11 +1,11 @@
 {
-    "name": "brackets-manager",
-    "version": "1.6.4",
+    "name": "tournament-backend",
+    "version": "0.0.1",
     "description": "A simple library to manage tournament brackets (round-robin, single elimination, double elimination)",
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
+    "main": "./build/index.js",
+    "types": "./build/index.d.ts",
     "files": [
-        "dist"
+        "build"
     ],
     "engines": {
         "node": ">=14"
@@ -53,12 +53,12 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Drarig29/brackets-manager.js.git"
+        "url": "git+https://github.com/rarechrisclark/tournament-backend.git"
     },
-    "author": "Corentin Girard",
+    "author": "Chris Clark",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Drarig29/brackets-manager.js/issues"
+        "url": "https://github.com/rarechrisclark/tournament-backend/issues"
     },
-    "homepage": "https://github.com/Drarig29/brackets-manager.js#readme"
+    "homepage": "https://github.com/rarechrisclark/tournament-backend#readme"
 }
